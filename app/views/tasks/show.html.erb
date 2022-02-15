@@ -3,3 +3,10 @@
 <h2><%= @task.title %></h2>
 <p><%= @task.details %></p>
 <p><%= @task.completed %></p>
+
+<button type="button" class="btn btn-secondary"><%= link_to 'HOME', tasks_path %></button>
+<button type="button" class="btn btn-secondary"><%= link_to 'DELETE TASK',
+    task_path(@task),
+    method: :delete,
+    data: { confirm: "Are you sure?" } %></button>
+<button type="button" class="btn btn-secondary"><%= link_to 'EDIT TASK',edit_task_path(@task)%></button>
